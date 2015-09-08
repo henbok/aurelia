@@ -1,0 +1,28 @@
+<template>
+  <form>
+
+    <br>
+    <fieldset>
+      <h3>Select</h3>
+      <select value.bind="mySelect">
+        <option>One</option>
+      </select>
+      <p>Selected: ${mySelect}</p>
+    </fieldset>
+    <br>
+    <fieldset>
+      <h3>Radio Buttons</h3>
+      <input type="radio" name="radioGroup" value="One" checked.bind="myRadio">
+      One<br>
+      <p>Selected: ${myRadio}</p>
+    </fieldset>
+    <br>
+    <fieldset>
+      <h3>Check boxes</h3>
+      <input type="checkbox" value="One" checked.bind="myCheckbox1">
+      One<br>
+      <p>Selected: ${myCheckbox1}, ${myCheckbox2}, ${myCheckbox3}</p>
+    </fieldset>
+
+  </form>
+</template>
