@@ -2,29 +2,52 @@
   <form submit.trigger="mySubmitFunction()">
 
     <fieldset>
-    <input type="text" value.bind="myInput"><br>
-    <input type="text" value.one-way="myInput"><br>
-    <input type="text" value.two-way="myInput"><br>
+      <h3>Input Fields: bind vs one-way vs two-way</h3>
+      First type here:<br>
+      <input type="text" value.bind="myInput"><br>
+      Then type here:<br>
+      <input type="text" value.one-way="myInput"><br>
+      And finally type here again:<br>
+      <input type="text" value.two-way="myInput"><br>
     </fieldset>
+    <br>
     <fieldset>
-    <select value.bind="mySelect">
-      <option>One</option>
-      <option>Two</option>
-      <option>Three</option>
-    </select>
-    <p>Selected: ${mySelect}</p>
+      <h3>Select</h3>
+      <select value.bind="mySelect">
+        <option>One</option>
+        <option>Two</option>
+        <option>Three</option>
+      </select>
+      <p>Selected: ${mySelect}</p>
     </fieldset>
+    <br>
     <fieldset>
-    <input type="radio" name="radioGroup" value="One" checked.bind="myRadio"> One<br>
-    <input type="radio" name="radioGroup" value="Two" checked.bind="myRadio"> Two<br>
-    <input type="radio" name="radioGroup" value="Three" checked.bind="myRadio"> Three
-    <p>Selected: ${myRadio}</p>
+      <h3>Radio Buttons</h3>
+      <input type="radio" name="radioGroup" value="One" checked.bind="myRadio">
+      One<br>
+      <input type="radio" name="radioGroup" value="Two" checked.bind="myRadio">
+      Two<br>
+      <input type="radio" name="radioGroup" value="Three" checked.bind="myRadio">
+      Three
+      <p>Selected: ${myRadio}</p>
     </fieldset>
+    <br>
     <fieldset>
-    <input type="checkbox" value="One" checked.bind="myCheckbox1"> One<br>
-    <input type="checkbox" value="Two" checked.bind="myCheckbox2"> Two<br>
-    <input type="checkbox" value="Three" checked.bind="myCheckbox3"> Three
-    <p>Selected: ${myCheckbox1}, ${myCheckbox2}, ${myCheckbox3}</p>
+      <h3>Check boxes</h3>
+      <input type="checkbox" value="One" checked.bind="myCheckbox1">
+      One<br>
+      <input type="checkbox" value="Two" checked.bind="myCheckbox2">
+      Two<br>
+      <input type="checkbox" value="Three" checked.bind="myCheckbox3">
+      Three
+      <p>Selected: ${myCheckbox1}, ${myCheckbox2}, ${myCheckbox3}</p>
+    </fieldset>
+    <br>
+    <fieldset>
+      <h3>Buttons</h3>
+      <input type="submit" value="Submit">
+      <button click.trigger="myButton('Triggered')">Trigger</button>
+      <button click.delegate="myButton('Delegated')">Delegate</button>
     </fieldset>
 
 
